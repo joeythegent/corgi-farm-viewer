@@ -7,7 +7,10 @@ export default function FarmGrid() {
 
   useEffect(() => {
     const fetchPlayers = async () => {
+      console.log("Fetching players from Supabase...");
       const { data, error } = await supabase.from('players').select('*');
+      console.log("Data:", data);
+console.log("Error:", error);
       if (!error) setPlayers(data);
     };
     fetchPlayers();
