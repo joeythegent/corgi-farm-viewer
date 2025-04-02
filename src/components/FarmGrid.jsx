@@ -3,7 +3,13 @@ import { supabase } from '../supabase';
 import corgiSprite from '/corgi.png';
 
 export default function FarmGrid() {
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState([
+  {
+    discord_id: "test-user",
+    corgis_adopted: 3
+  }
+]);
+
 
   console.log("FarmGrid component loaded ✅");
 
