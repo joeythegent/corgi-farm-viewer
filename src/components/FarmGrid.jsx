@@ -5,6 +5,9 @@ import corgiSprite from '/corgi.png';
 export default function FarmGrid() {
   const [players, setPlayers] = useState([]);
 
+  console.log("FarmGrid component loaded ✅");
+
+
   useEffect(() => {
     const fetchPlayers = async () => {
       console.log("Fetching players from Supabase...");
