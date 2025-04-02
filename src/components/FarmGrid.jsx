@@ -13,6 +13,11 @@ export default function FarmGrid() {
     fetchPlayers();
   }, []);
 
+  if (players.length === 0) {
+    return <p className="text-center text-gray-600 mt-8">No corgis yet. Use <code>!adopt</code> in Discord! 🐶</p>;
+  }
+  
+
   return (
     <div className="grid grid-cols-10 gap-2 p-4 bg-green-200 min-h-screen">
       {players.map((player, index) => (
